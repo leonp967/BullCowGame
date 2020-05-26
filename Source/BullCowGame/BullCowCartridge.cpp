@@ -32,9 +32,9 @@ void UBullCowCartridge::SetupGame()
     bGameOver = false;
 
     PrintLine(TEXT("Guess the %i letter isogram!"), HiddenWord.Len());
+    PrintLine(TEXT("The word is: %s"), *HiddenWord); //Debug
     PrintLine(TEXT("You have %i lives."), PlayerLives);
     PrintLine(TEXT("Press enter to continue..."));
-    PrintLine(TEXT("The word is: %s"), *HiddenWord); //Debug
 }
 
 bool UBullCowCartridge::CheckGuess(const FString& Guess)
